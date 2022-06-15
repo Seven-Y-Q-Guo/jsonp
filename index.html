@@ -12,14 +12,26 @@
     </script>
     <script src="jsonp.js" charset="utf-8"></script> -->
     <script type="text/javascript">
-      function hello(info) {
-        console.log(info);
+      // function hello(info) {
+      //   console.log(info);
+      // }
+      //
+      // const script = document.createElement('script');
+      // script.src = "jsonp.js";
+      //
+      // document.body.append(script);
+
+      function jsonp(url) {
+        window.hello = function(info) {
+          console.log(info);
+        }
+        const script = document.createElement('script');
+        script.src = "jsonp.js";
+
+        document.body.append(script);
       }
 
-      const script = document.createElement('script');
-      script.src = "jsonp.js";
-
-      document.body.append(script);
+      jsonp();
     </script>
   </body>
 </html>
