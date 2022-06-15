@@ -5,33 +5,18 @@
     <title></title>
   </head>
   <body>
-    <!-- <script type="text/javascript">
-      function hello(info) {
-        console.log(info);
-      }
-    </script>
-    <script src="jsonp.js" charset="utf-8"></script> -->
     <script type="text/javascript">
-      // function hello(info) {
-      //   console.log(info);
-      // }
-      //
-      // const script = document.createElement('script');
-      // script.src = "jsonp.js";
-      //
-      // document.body.append(script);
-
-      function jsonp(url) {
-        window.hello = function(info) {
-          console.log(info);
-        }
+      function jsonp(url, name, cb) {
+        window[name] = cb;
         const script = document.createElement('script');
-        script.src = "jsonp.js";
+        script.src = url;
 
         document.body.append(script);
       }
 
-      jsonp();
+      jsonp('jsonp.js', 'hello', function(info) {
+        console.log(info);
+      });
     </script>
   </body>
 </html>
