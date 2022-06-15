@@ -6,12 +6,14 @@
   </head>
   <body>
     <script type="text/javascript">
-      function hello(name) {
-        console.log(name);
+      function hello(info) {
+        console.log(info);
       }
     </script>
     <script charset="utf-8">
-      hello('seven');
+      hello({
+        name: 'seven'
+      });
     </script>
   </body>
 </html>
