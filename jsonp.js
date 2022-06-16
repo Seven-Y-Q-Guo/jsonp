@@ -6,5 +6,9 @@ function jsonp(url, name, cb) {
   params.set('callback', name);
   script.src = u.origin + u.pathname + '?' + params.toString();
 
+  script.onerror = function() {
+    console.log('error');
+  }
+
   document.body.append(script);
 }
