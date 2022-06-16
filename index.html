@@ -9,12 +9,12 @@
       function jsonp(url, name, cb) {
         window[name] = cb;
         const script = document.createElement('script');
-        script.src = url;
+        script.src = url + '&callback=' + name;
 
         document.body.append(script);
       }
 
-      jsonp('jsonp.js', 'hello', function(info) {
+      jsonp('http://jsfiddle.net/echo/jsonp?name=seven', 'hello', function(info) {
         console.log(info);
       });
     </script>
