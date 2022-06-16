@@ -7,8 +7,10 @@
   <body>
     <script src="jsonp.js" charset="utf-8"></script>
     <script type="text/javascript">
-      jsonp('http://jsfiddle.net/echo/jsonp?name=seven', 'hello', function(info) {
+      jsonp('http://jsfiddle.net/echo/jsonp?name=seven', 'hello', (info) => {
         console.log(info);
+      }, (error) => {
+        console.log(error);
       });
     </script>
   </body>
