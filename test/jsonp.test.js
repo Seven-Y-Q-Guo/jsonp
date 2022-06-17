@@ -78,3 +78,25 @@ test('named callback', () => {
     }
   });
 });
+
+test('cancel jsonp', () => {
+  const obj = {
+    name: 'seven',
+    gender: 'male'
+  };
+  const searchParams = new URLSearchParams(obj);
+  const queryString = searchParams.toString();
+
+  const cancel = jsonp(`http://xxx?${queryString}`, {
+    name: 'hello',
+    callback: 'cb',
+    success: (info) => {
+      // No success
+    },
+    error: (error) => {
+      // No error
+    }
+  });
+
+  cancel();
+});

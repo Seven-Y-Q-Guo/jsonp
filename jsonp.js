@@ -31,7 +31,7 @@ function jsonp(url, { name, success, error, timeout = 3000, param = 'callback' }
 
   document.body.append(script);
 
-  return cleanup
+  return cleanup;
 }
 
 module.exports = jsonp;
