@@ -33,3 +33,5 @@ function jsonp(url, { name, success, error, timeout = 3000 }) {
 
   return cleanup
 }
+
+module.exports = jsonp;
