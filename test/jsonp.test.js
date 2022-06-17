@@ -1,3 +1,5 @@
+// seems jest can't load dynamic js and excute accordingly, so use mocha as ut instead.
+
 const jsonp = require('../jsonp');
 
 test('basic jsonp', () => {
@@ -17,8 +19,6 @@ test('basic jsonp', () => {
       // No error
     }
   });
-
-  expect(1).toBe(2);
 });
 
 test('404', () => {

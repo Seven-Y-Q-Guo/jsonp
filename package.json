@@ -6,7 +6,8 @@
   "scripts": {
     "test": "jest",
     "build": "esbuild jsonp.js --bundle --outfile=dist/out.js",
-    "build:example": "esbuild example/index.js --bundle --outfile=example/build.js"
+    "build:example": "esbuild example/index.js --bundle --outfile=example/build.js",
+    "build:test": "esbuild test/test.js --bundle --outfile=test/out.js"
   },
   "repository": {
     "type": "git",
@@ -27,6 +28,7 @@
   },
   "devDependencies": {
     "jest": "^28.1.1",
-    "jest-environment-jsdom": "^28.1.1"
+    "jest-environment-jsdom": "^28.1.1",
+    "mocha": "^10.0.0"
   }
 }
