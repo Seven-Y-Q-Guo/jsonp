@@ -4,11 +4,14 @@ function jsonp(url, { name, success, error, timeout = 3000 }) {
   const params = new URLSearchParams(u.search);
   params.set('callback', name);
   script.src = u.origin + u.pathname + '?' + params.toString();
+  let timer;
 
-  const timer = setTimeout(function () {
-    cleanup();
-    error('timeout');
-  }, timeout);
+  if (timeout) {
+    timer = setTimeout(function () {
+      cleanup();
+      error('timeout');
+    }, timeout);
+  }
 
   function cleanup() {
     window[name] = () => {};
