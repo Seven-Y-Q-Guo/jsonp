@@ -41,7 +41,7 @@
     }
   });
 
-  // test/test.js
+  // test/main.js
   var jsonp = require_jsonp();
   mocha.setup("bdd");
   var obj = {
