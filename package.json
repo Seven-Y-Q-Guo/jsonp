@@ -2,7 +2,7 @@
   "name": "jsonp",
   "version": "1.0.0",
   "description": "Inspired from https://github.com/webmodules/jsonp",
-  "main": "jsonp.js",
+  "main": "./dist/out.js",
   "scripts": {
     "test": "jest",
     "build": "esbuild jsonp.js --bundle --outfile=dist/out.js",
@@ -13,7 +13,7 @@
     "type": "git",
     "url": "git+https://github.com/Seven-Y-Q-Guo/jsonp.git"
   },
-  "keywords": [],
+  "keywords": ["jsonp", "build your own"],
   "author": "",
   "license": "ISC",
   "bugs": {
