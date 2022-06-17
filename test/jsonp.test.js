@@ -17,6 +17,8 @@ test('basic jsonp', () => {
       // No error
     }
   });
+
+  expect(1).toBe(2);
 });
 
 test('404', () => {
