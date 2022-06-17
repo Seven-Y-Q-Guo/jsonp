@@ -12,6 +12,7 @@ function jsonp(url, { name, success, error, timeout = 3000 }) {
 
   function cleanup() {
     window[name] = () => {};
+    script.remove();
     clearTimeout(timer);
   }
 
