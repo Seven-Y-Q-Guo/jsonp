@@ -1,5 +1,5 @@
 {
-  "name": "jsonp",
+  "name": "@seven_y_q_guo/jsonp",
   "version": "1.0.0",
   "description": "Inspired from https://github.com/webmodules/jsonp",
   "main": "./dist/out.js",
@@ -13,7 +13,10 @@
     "type": "git",
     "url": "git+https://github.com/Seven-Y-Q-Guo/jsonp.git"
   },
-  "keywords": ["jsonp", "build your own"],
+  "keywords": [
+    "jsonp",
+    "build your own"
+  ],
   "author": "",
   "license": "ISC",
   "bugs": {
@@ -30,5 +33,9 @@
     "jest": "^28.1.1",
     "jest-environment-jsdom": "^28.1.1",
     "mocha": "^10.0.0"
+  },
+  "directories": {
+    "example": "example",
+    "test": "test"
   }
 }
