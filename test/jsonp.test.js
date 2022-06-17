@@ -14,7 +14,7 @@ test('basic jsonp', () => {
       expect(info).toEqual(obj);
     },
     error: (error) => {
-      console.log(error);
+      // No error
     }
   });
 });
@@ -55,6 +55,26 @@ test('timeout', () => {
     },
     error: (error) => {
       expect(error).toBe('timeout');
+    }
+  });
+});
+
+test('named callback', () => {
+  const obj = {
+    name: 'seven',
+    gender: 'male'
+  };
+  const searchParams = new URLSearchParams(obj);
+  const queryString = searchParams.toString();
+
+  jsonp(`http://xxx?${queryString}`, {
+    name: 'hello',
+    callback: 'cb',
+    success: (info) => {
+      expect(info).toEqual(obj);
+    },
+    error: (error) => {
+      // No error
     }
   });
 });
