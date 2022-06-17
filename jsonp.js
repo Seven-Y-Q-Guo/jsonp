@@ -1,4 +1,4 @@
-function jsonp(url, { name, success, error }) {
+function jsonp(url, { name, success, error, timeout = 3000 }) {
   window[name] = success;
   const script = document.createElement('script');
   const u = new URL(url);
@@ -9,6 +9,11 @@ function jsonp(url, { name, success, error }) {
   script.onerror = () => {
     error('Can\'t get url');
   }
+
+  setTimeout(function () {
+    window[name] = () => {};
+    error('timeout');
+  }, timeout);
 
   document.body.append(script);
 }
