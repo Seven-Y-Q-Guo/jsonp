@@ -4,7 +4,9 @@
   "description": "Inspired from https://github.com/webmodules/jsonp",
   "main": "jsonp.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "build": "esbuild jsonp.js --bundle --outfile=dist/out.js",
+    "build:example": "esbuild example/index.js --bundle --outfile=example/build.js"
   },
   "repository": {
     "type": "git",
@@ -17,13 +19,14 @@
     "url": "https://github.com/Seven-Y-Q-Guo/jsonp/issues"
   },
   "homepage": "https://github.com/Seven-Y-Q-Guo/jsonp#readme",
-  "devDependencies": {
-    "jest": "^28.1.1"
-  },
   "jest": {
     "testEnvironment": "jsdom"
   },
   "dependencies": {
+    "esbuild": "^0.14.45"
+  },
+  "devDependencies": {
+    "jest": "^28.1.1",
     "jest-environment-jsdom": "^28.1.1"
   }
 }
