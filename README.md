@@ -54,7 +54,7 @@ Returns a function that, when called, will cancel the in-progress jsonp request
 ### You can implement easily
 
 ```javascript
-function fetchJson(url, opts) {
+function fetchJson(url, opts = {}) {
   return new Promise((resolve, reject) => {
     jsonp(url, {
       ...opts,
@@ -64,9 +64,7 @@ function fetchJson(url, opts) {
   })
 }
 
-fetchJson('http://jsfiddle.net/echo/jsonp?name=seven', {
-  name: 'hello1'
-}).then(res => {
+fetchJson('http://jsfiddle.net/echo/jsonp?name=seven').then(res => {
   console.log(res);
 }).catch(err => {
   console.log(err);
