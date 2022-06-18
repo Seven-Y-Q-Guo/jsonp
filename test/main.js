@@ -89,6 +89,18 @@ describe("jsonp", function () {
      chai.assert.equal('cancel', 'cancel');
      done();
    });
+
+   it("random name", function (done) {
+      jsonp(`http://jsfiddle.net/echo/jsonp?${queryString}`, {
+        success: (info) => {
+          chai.assert.deepEqual(info, obj);
+          done();
+        },
+        error: (error) => {
+          // No error
+        }
+      });
+   });
 });
 
 // run tests
