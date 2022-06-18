@@ -23,7 +23,7 @@ jsonp('http://jsfiddle.net/echo/jsonp?name=seven', {
     console.log(info); // {name: 'seven'}
   },
   error: (error) => {
-    console.log(error);
+    console.log(error); // handle kinds of errors like timeout, 404, etc.
   }
 });
 
