@@ -2,7 +2,7 @@
   "name": "@seven_y_q_guo/jsonp",
   "version": "1.1.0",
   "description": "Inspired from https://github.com/webmodules/jsonp",
-  "main": "./dist/out.js",
+  "main": "jsonp.js",
   "scripts": {
     "test": "jest",
     "build": "esbuild jsonp.js --bundle --outfile=dist/out.js",
