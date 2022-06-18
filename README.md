@@ -32,3 +32,14 @@ jsonp('http://jsfiddle.net/echo/jsonp?name=seven', {
 ## API
 
 ### jsonp(url, opts)
+
+- `url` (`String`) url to fetch
+- `opts` (`Object`)
+  - `success` handle success
+  - `error` handle error
+  - `param` (`String`) name of the query string parameter to specify
+    the callback (defaults to `callback`)
+  - `timeout` (`Number`) how long after a timeout error is emitted. `0` or other falsy value to
+    disable (defaults to `30000`)
+  - `name` (`String`) name of the global callback functions that
+    handle jsonp responses
