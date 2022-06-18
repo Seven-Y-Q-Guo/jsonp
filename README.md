@@ -15,12 +15,12 @@ npm i @seven_y_q_guo/jsonp
 
 ```javascript
 
-var jsonp = require("@seven_y_q_guo/jsonp");
+const jsonp = require("@seven_y_q_guo/jsonp"); // or import jsonp from '@seven_y_q_guo/jsonp';
 
 jsonp('http://jsfiddle.net/echo/jsonp?name=seven', {
   name: 'hello',
   success: (info) => {
-    console.log(info);
+    console.log(info); // {name: 'seven'}
   },
   error: (error) => {
     console.log(error);
