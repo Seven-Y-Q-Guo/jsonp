@@ -49,6 +49,30 @@ jsonp('http://jsfiddle.net/echo/jsonp?name=seven', {
 Returns a function that, when called, will cancel the in-progress jsonp request
 (`success` & `error` won't be called any more).
 
+## Want Promise?
+
+### You can implement easily
+
+```javascript
+function fetchJson(url, opts) {
+  return new Promise((resolve, reject) => {
+    jsonp(url, {
+      ...opts,
+      success: resolve,
+      error: reject
+    });
+  })
+}
+
+fetchJson('http://jsfiddle.net/echo/jsonp?name=seven', {
+  name: 'hello1'
+}).then(res => {
+  console.log(res);
+}).catch(err => {
+  console.log(err);
+});
+```
+
 ## License
 
 MIT
