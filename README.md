@@ -41,6 +41,8 @@ jsonp('http://jsfiddle.net/echo/jsonp?name=seven', {
     the callback (defaults to `callback`)
   - `timeout` (`Number`) how long after a timeout error is emitted. `0` or other falsy value to
     disable (defaults to `30000`)
+  - `prefix` (`String`) prefix for the global callback functions that
+    handle jsonp responses (defaults to `__jp`)
   - `name` (`String`) optional: name of the global callback functions that
     handle jsonp responses, will generate `__jp + incremented` counter if not passing specific name
 
