@@ -43,3 +43,10 @@ jsonp('http://jsfiddle.net/echo/jsonp?name=seven', {
     disable (defaults to `30000`)
   - `name` (`String`) optional: name of the global callback functions that
     handle jsonp responses, will generate `__jp + incremented` counter if not passing specific name
+
+Returns a function that, when called, will cancel the in-progress jsonp request
+(`success` & `error` won't be called any more).
+
+## License
+
+MIT
